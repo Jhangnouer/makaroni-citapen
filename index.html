@@ -1,0 +1,731 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MAKARONI CITAPEN | RENYAH SAMPE PAGI! 🔥</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        line-height: 1.6;
+        color: #333;
+        overflow-x: hidden;
+      }
+
+      /* NAVBAR - UKURAN NORMAL */
+      .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(20px);
+        z-index: 1000;
+        padding: 0.8rem 0;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+      }
+
+      .logo {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 1.8rem;
+        font-weight: 400;
+        background: linear-gradient(45deg, #ff6b6b, #feca57);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .nav-menu {
+        display: flex;
+        list-style: none;
+        gap: 1.5rem;
+        align-items: center;
+      }
+
+      .nav-link {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .nav-link:hover,
+      .nav-link.active {
+        color: #ff6b6b;
+      }
+
+      .wa-btn-nav {
+        background: linear-gradient(45deg, #25d366, #128c7e);
+        color: white;
+        padding: 0.7rem 1.5rem;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+      }
+
+      .wa-btn-nav:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+      }
+
+      .menu-toggle {
+        display: none;
+        font-size: 1.3rem;
+        background: none;
+        border: none;
+        color: #333;
+        cursor: pointer;
+      }
+
+      /* COPYWRITING */
+      .highlight {
+        background: linear-gradient(45deg, #ff6b6b, #feca57);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-weight: 700;
+      }
+
+      .fire-emoji {
+        color: #ff4757;
+        font-size: 1.1em;
+      }
+      .star-emoji {
+        color: #feca57;
+        animation: twinkle 1.5s infinite;
+      }
+
+      @keyframes twinkle {
+        0%,
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 0.7;
+          transform: scale(1.1);
+        }
+      }
+
+      /* CONTAINER */
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+
+      section {
+        padding: 80px 0;
+      }
+
+      .section-title {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 2.8rem;
+        text-align: center;
+        margin-bottom: 1rem;
+        color: #333;
+      }
+
+      .section-subtitle {
+        text-align: center;
+        font-size: 1.1rem;
+        color: #666;
+        max-width: 500px;
+        margin: 0 auto 3rem;
+      }
+
+      /* HERO - FONT PROPORSI */
+      .hero {
+        height: 100vh;
+        background: linear-gradient(
+          135deg,
+          #1e3c72 0%,
+          #2a5298 50%,
+          #ff6b6b 100%
+        );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+      }
+
+      .hero-content {
+        max-width: 800px;
+      }
+
+      .hero-title {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 4rem;
+        margin-bottom: 0.8rem;
+        line-height: 1;
+      }
+
+      .hero-highlight {
+        font-size: 1.6rem;
+        font-weight: 600;
+        margin: 1.5rem 0;
+        line-height: 1.4;
+      }
+
+      /* BUTTON - UKURAN NORMAL & DINAMIS */
+      .btn {
+        display: inline-block;
+        padding: 1rem 2rem;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        border: none;
+        cursor: pointer;
+      }
+
+      .btn-primary {
+        background: linear-gradient(45deg, #ff6b6b, #feca57);
+        color: white;
+        box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 35px rgba(255, 107, 107, 0.5);
+      }
+
+      .btn-secondary {
+        background: transparent;
+        color: white;
+        border: 2px solid white;
+      }
+
+      .btn-secondary:hover {
+        background: white;
+        color: #333;
+      }
+
+      .btn-wa {
+        background: linear-gradient(45deg, #25d366, #128c7e);
+        color: white;
+        box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+        width: 100%;
+      }
+
+      .btn-wa:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 35px rgba(37, 211, 102, 0.5);
+      }
+
+      /* MENU - DENGAN FOTO PRODUK */
+      .menu {
+        background: #f8f9fa;
+      }
+
+      .products-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2rem;
+      }
+
+      .product-card {
+        background: white;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        transition: all 0.4s ease;
+        text-align: center;
+      }
+
+      .product-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+      }
+
+      .product-image {
+        height: 220px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .product-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+      }
+
+      .product-card:hover .product-image img {
+        transform: scale(1.05);
+      }
+
+      .product-content {
+        padding: 1.5rem;
+      }
+
+      .product-title {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+        color: #333;
+      }
+
+      .product-price {
+        font-size: 1.8rem;
+        font-weight: 700;
+        background: linear-gradient(45deg, #ff6b6b, #feca57);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 1rem;
+      }
+
+      .product-desc {
+        color: #666;
+        margin-bottom: 1.5rem;
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
+
+      /* TENTANG & KONTAK - FONT PROPORSI */
+      .tentang-content,
+      .kontak-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: center;
+      }
+
+      .tentang-text h3 {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: #ff6b6b;
+      }
+
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+      }
+
+      .stat-number {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 2.2rem;
+        color: #ff6b6b;
+      }
+
+      .kontak-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+      }
+
+      .kontak-item i {
+        font-size: 1.2rem;
+        margin-right: 1rem;
+        color: #feca57;
+        width: 25px;
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 768px) {
+        .menu-toggle {
+          display: block;
+        }
+        .nav-menu {
+          position: fixed;
+          left: -100%;
+          top: 70px;
+          flex-direction: column;
+          background: white;
+          width: 100%;
+          text-align: center;
+          padding: 2rem 0;
+          box-shadow: 0 10px 27px rgba(0, 0, 0, 0.1);
+        }
+        .nav-menu.active {
+          left: 0;
+        }
+
+        .hero-title {
+          font-size: 2.8rem;
+        }
+        .tentang-content,
+        .kontak-content {
+          grid-template-columns: 1fr;
+        }
+        .products-grid {
+          grid-template-columns: 1fr;
+        }
+        .section-title {
+          font-size: 2.2rem;
+        }
+      }
+
+      /* FLOATING WA */
+      .floating-wa {
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+        background: linear-gradient(45deg, #25d366, #128c7e);
+        color: white;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+        z-index: 1000;
+        animation: bounce 2s infinite;
+      }
+
+      @keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-8px);
+        }
+        60% {
+          transform: translateY(-4px);
+        }
+      }
+
+      /*footer*/
+
+      .footer {
+        background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+        color: white;
+        padding: 3rem 0 1.5rem;
+        margin-top: 5rem;
+      }
+
+      .footer-top {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: 2rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .footer ul {
+        list-style: none;
+      }
+      .footer ul li {
+        margin-bottom: 0.6rem;
+      }
+      .footer ul li a {
+        text-decoration: none;
+        color: #ccc;
+        transition: color 0.3s;
+      }
+      .footer ul li a:hover {
+        color: #ff6b6b !important;
+      }
+
+      .logo-footer {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 1.8rem;
+        background: linear-gradient(45deg, #ff6b6b, #feca57);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .wa-footer-btn {
+        display: inline-block;
+        background: linear-gradient(45deg, #25d366, #128c7e);
+        color: white;
+        padding: 0.9rem 1.8rem;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: 600;
+        box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        transition: all 0.3s;
+      }
+
+      .wa-footer-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 30px rgba(37, 211, 102, 0.6);
+      }
+
+      @media (max-width: 768px) {
+        .footer-top {
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">🍝 MAKARONI CITAPEN</div>
+        <ul class="nav-menu">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#menu" class="nav-link">Menu</a></li>
+          <li><a href="#tentang" class="nav-link">Tentang</a></li>
+          <li><a href="#kontak" class="nav-link">Kontak</a></li>
+          <a
+            href="https://wa.me/6281234567890"
+            class="wa-btn-nav"
+            target="_blank"
+            ><i class="fab fa-whatsapp"></i> WA</a
+          >
+        </ul>
+        <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title">MAKARONI</h1>
+          <h1 class="hero-title highlight">
+            CITAPEN <span class="fire-emoji">🔥</span>
+          </h1>
+          <div class="hero-highlight">
+            Renyah sampe pagi • Gurih nempel di lidah<br />
+            <strong
+              >100gr Cuma Rp15.000 <span class="star-emoji">⭐</span></strong
+            >
+          </div>
+          <div style="margin-top: 2rem">
+            <a
+              href="https://wa.me/6281234567890?text=Halo%20makaroni%20CITAPEN!%20Saya%20mau%20pesan🔥"
+              class="btn btn-primary"
+              target="_blank"
+              >PESAN via WA</a
+            >
+            <a href="#menu" class="btn btn-secondary" style="margin-left: 1rem"
+              >LIHAT MENU</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENU DENGAN FOTO -->
+    <section id="menu" class="menu">
+      <div class="container">
+        <h2 class="section-title">MENU KAMI</h2>
+        <p class="section-subtitle">Pilih yang bikin lidahmu kegoda!</p>
+        <div class="products-grid">
+          <!-- ORIGINAL -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="images/image1.jfif" alt="Makaroni Original" />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">ORIGINAL GURIH</h3>
+              <div class="product-price">Rp 15.000</div>
+              <p class="product-desc">
+                Renyah CITAPENk sampe habis! Gurihnya nempel di lidah.
+                <strong>Terlaris #1!</strong>
+              </p>
+              <button
+                class="btn btn-wa"
+                onclick="orderWA('ORIGINAL GURIH - Rp15.000 / 100gr')"
+              >
+                <i class="fab fa-whatsapp"></i> Pesan
+              </button>
+            </div>
+          </div>
+
+          <!-- PEDAS -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="images/image2.jfif" alt="Makaroni Pedas" />
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">PEDAS LEVEL 10</h3>
+              <div class="product-price">Rp 18.000</div>
+              <p class="product-desc">
+                Pedasnya bikin mata berair! Renyah + pedas =
+                <strong>Memabukkan!</strong>
+              </p>
+              <button
+                class="btn btn-wa"
+                onclick="orderWA('PEDAS LEVEL 10 - Rp18.000 / 100gr')"
+              >
+                <i class="fab fa-whatsapp"></i> Pesan
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TENTANG -->
+    <section id="tentang" class="tentang">
+      <div class="container">
+        <h2 class="section-title">KENAPA Pilih KAMI?</h2>
+        <div class="tentang-content">
+          <div class="tentang-text">
+            <h3><i class="fas fa-heart"></i> KERENABAN RUMAHAN</h3>
+            <p>
+              Dibuat fresh setiap hari dengan resep rahasia turun-temurun. Bahan
+              premium, higienis, 100% halal!
+            </p>
+            <div class="stats">
+              <div class="stat-item">
+                <div class="stat-number">500+</div>
+                <div>Happy Customer</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">50kg</div>
+                <div>/Hari</div>
+              </div>
+            </div>
+          </div>
+          <img
+            src="images/image3.jfif"
+            alt="Dapur"
+            style="
+              width: 100%;
+              border-radius: 15px;
+              box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            "
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAK -->
+    <section
+      id="kontak"
+      class="kontak"
+      style="
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+      "
+    >
+      <div class="container">
+        <h2 class="section-title" style="color: white">KONTAK KAMI</h2>
+        <div class="kontak-content">
+          <div>
+            <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem">
+              <i class="fab fa-whatsapp"></i> WA FAST RESPONSE
+            </h3>
+            <div class="kontak-item">
+              <i class="fab fa-whatsapp"></i> <strong>08997333261</strong>
+            </div>
+            <div class="kontak-item">
+              <i class="fas fa-map-marker-alt"></i> Jl. Empangsari, Kec. Tawang,
+              Kota. Tasikmalaya
+            </div>
+            <div class="kontak-item">
+              <i class="fas fa-clock"></i> 07.00 - 17:00
+            </div>
+          </div>
+          <div style="text-align: center">
+            <a
+              href="https://wa.me/628997333261"
+              class="btn btn-primary"
+              style="
+                background: #25d366;
+                padding: 1.2rem 2.5rem;
+                font-size: 1.1rem;
+              "
+              target="_blank"
+            >
+              <i class="fab fa-whatsapp"></i> Chat Sekarang
+            </a>
+          </div>
+          <p style="color: #aaa; margin: 0">
+            ©2026 <span style="color: #ff6b6b">MAKARONI CITAPEN</span> | Dibuat oleh : Anissa Agustini - 11220012 ❤️
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FLOATING WA -->
+    <a
+      href="https://wa.me/6281234567890?text=Halo%20makaroni%20CITAPEN!"
+      class="floating-wa"
+      target="_blank"
+      title="WhatsApp"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+      const PHONE_NUMBER = "628997333261"; // GANTI NOMOR KAMU
+
+      function orderWA(product) {
+        const message = `Halo Makaroni CITAPEN! 😍%0A%0APesan: ${product}%0A%0AInfo ketersediaan & ongkir? 🚚`;
+        window.open(`https://wa.me/${PHONE_NUMBER}?text=${message}`, "_blank");
+      }
+
+      // Mobile menu
+      document.querySelector(".menu-toggle").addEventListener("click", () => {
+        document.querySelector(".nav-menu").classList.toggle("active");
+      });
+
+      // Smooth scroll & active nav
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document
+            .querySelector(this.getAttribute("href"))
+            .scrollIntoView({ behavior: "smooth" });
+          document.querySelector(".nav-menu").classList.remove("active");
+        });
+      });
+
+      // Navbar active
+      window.addEventListener("scroll", () => {
+        const sections = document.querySelectorAll("section");
+        let current = "";
+        sections.forEach((section) => {
+          if (window.scrollY >= section.offsetTop - 100) {
+            current = section.getAttribute("id");
+          }
+        });
+        document.querySelectorAll(".nav-link").forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${current}`)
+            link.classList.add("active");
+        });
+      });
+    </script>
+
+    
+  </body>
+</html>
