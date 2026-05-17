@@ -193,7 +193,7 @@
       .hero-highlight {
         font-size: 1.6rem;
         font-weight: 600;
-        margin: 1.5rem 0;
+        margin: 1rem 0;
         line-height: 1.4;
       }
 
@@ -361,7 +361,9 @@
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
         aspect-ratio: 4/3;
         background: #ddd;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
       }
 
       .gallery-item img {
@@ -477,9 +479,19 @@
       }
 
       @keyframes bounce {
-        0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-        40% { transform: translateY(-8px); }
-        60% { transform: translateY(-4px); }
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-8px);
+        }
+        60% {
+          transform: translateY(-4px);
+        }
       }
 
       /* FOOTER */
@@ -552,7 +564,8 @@
           <div class="hero-highlight">
             Renyah sampe pagi • Gurih nempel di lidah<br />
             <strong
-              >Mulai Rp5.000 (100 gr) & Rp10.000 (250 gr) <span class="star-emoji">⭐</span></strong
+              >Mulai Rp5.000 (100 gr) & Rp10.000 (250 gr)
+              <span class="star-emoji">⭐</span></strong
             >
           </div>
           <div style="margin-top: 2rem">
@@ -577,14 +590,15 @@
         <div class="products-grid">
           <div class="product-card">
             <div class="product-image">
-              <img src="images/image1.jfif" alt="Makaroni Original" />
+              <img src="images/image1.jpg" alt="Makaroni Original" />
             </div>
             <div class="product-content">
               <h3 class="product-title">VARIAN ORIGINAL</h3>
               <div class="product-price">100g: Rp5.000 | 250g: Rp10.000</div>
               <p class="product-desc">
-                Gurihnya nempel di lidah! Tersedia dalam pilihan 
-                <strong>Makaroni Kering</strong> atau <strong>Makaroni Basah</strong> sesuai seleramu.
+                Gurihnya nempel di lidah! Tersedia dalam pilihan
+                <strong>Makaroni Kering</strong> atau
+                <strong>Makaroni Basah</strong> sesuai seleramu.
               </p>
               <button
                 class="btn btn-wa"
@@ -597,14 +611,15 @@
 
           <div class="product-card">
             <div class="product-image">
-              <img src="images/image2.jfif" alt="Makaroni Pedas" />
+              <img src="images/image2.jpg" alt="Makaroni Pedas" />
             </div>
             <div class="product-content">
               <h3 class="product-title">VARIAN PEDAS 🔥</h3>
               <div class="product-price">100g: Rp5.000 | 250g: Rp10.000</div>
               <p class="product-desc">
-                Pedasnya bikin nagih mantap! Tersedia dalam pilihan 
-                <strong>Makaroni Kering</strong> atau <strong>Makaroni Basah</strong>.
+                Pedasnya bikin nagih mantap! Tersedia dalam pilihan
+                <strong>Makaroni Kering</strong> atau
+                <strong>Makaroni Basah</strong>.
               </p>
               <button
                 class="btn btn-wa"
@@ -625,8 +640,9 @@
           <div class="tentang-text">
             <h3><i class="fas fa-heart"></i> KERENYAHAN RUMAHAN</h3>
             <p>
-              Dibuat fresh setiap hari dengan resep terbaik. Bahan
-              premium, higienis, 100% halal! Pilih jenis kesukaanmu, mau yang tipe Kering kriuk atau Basah yang bumbunya meresap.
+              Dibuat fresh setiap hari dengan resep terbaik. Bahan premium,
+              higienis, 100% halal! Pilih jenis kesukaanmu, mau yang tipe Kering
+              kriuk atau Basah yang bumbunya meresap.
             </p>
             <div class="stats">
               <div class="stat-item">
@@ -640,7 +656,7 @@
             </div>
           </div>
           <img
-            src="images/image3.jfif"
+            src="images/dokumentasi4.jpeg"
             alt="Dapur"
             style="
               width: 100%;
@@ -655,32 +671,40 @@
     <section id="galeri" class="galeri">
       <div class="container">
         <h2 class="section-title">GALERI DOKUMENTASI</h2>
-        <p class="section-subtitle">Intip kebersihan proses produksi dan aktivitas harian kami!</p>
-        
+        <p class="section-subtitle">
+          Intip kebersihan proses produksi dan aktivitas harian kami!
+        </p>
+
         <div class="gallery-grid">
           <div class="gallery-item">
             <img src="images/dokumentasi5.jpeg" alt="Dokumentasi 1" />
-            <div class="gallery-caption">Dokumentasi Pembuatan Website</div>
+            <div class="gallery-caption">Proses Menggoreng Higienis 🥣</div>
           </div>
           <div class="gallery-item">
             <img src="images/dokumentasi.jpeg" alt="Dokumentasi 2" />
-            <div class="gallery-caption">Pengemasan Rapi & Aman </div>
+            <div class="gallery-caption">Bahan Baku Berkualitas & Halal 🥇</div>
           </div>
           <div class="gallery-item">
             <img src="images/dokumentasi3.jpeg" alt="Dokumentasi 3" />
-            <div class="gallery-caption">Bahan Baku Berkualitas & Halal </div>
+            <div class="gallery-caption">Pengemasan Rapi & Aman 📦</div>
           </div>
           <div class="gallery-item">
             <img src="images/dokumentasi4.jpeg" alt="Dokumentasi 4" />
-            <div class="gallery-caption">Pilihan Paket Makaroni basah dan kering</div>
+            <div class="gallery-caption">
+              Ratusan Pcs Siap Kirim Setiap Hari 🚚
+            </div>
           </div>
           <div class="gallery-item">
             <img src="images/dokumentasi2.jpeg" alt="Dokumentasi 5" />
-            <div class="gallery-caption">Varian Rasa Extra Pedas</div>
+            <div class="gallery-caption">
+              Ratusan Pcs Siap Kirim Setiap Hari 🚚
+            </div>
           </div>
           <div class="gallery-item">
             <img src="images/dokumentasi6.jpeg" alt="Dokumentasi 6" />
-            <div class="gallery-caption">Ratusan Pcs Siap Kirim Setiap Hari 🚚</div>
+            <div class="gallery-caption">
+              Ratusan Pcs Siap Kirim Setiap Hari 🚚
+            </div>
           </div>
         </div>
       </div>
@@ -726,9 +750,26 @@
               <i class="fab fa-whatsapp"></i> Chat Sekarang
             </a>
           </div>
-          <p style="color: #aaa; margin: 0; grid-column: 1 / -1; text-align: center; margin-top: 2rem;">
-            ©2026 <span style="color: #ff6b6b">MAKARONI CITAPEN</span> | Dibuat oleh : Anissa Agustini - 11220012 ❤️
-          </p>
+          <div
+            style="grid-column: 1 / -1; text-align: center; margin-top: 2rem"
+          >
+            <img
+              src="images/logo.png"
+              alt="Logo Dci"
+              style="
+                max-height: 60px;
+                width: auto;
+                margin-bottom: 1rem;
+                display: inline-block;
+              "
+            />
+           <h2>STMIK DCI</h2> 
+
+            <p style="color: #aaa; margin: 0; font-size: 0.9rem">
+              ©2026 <span style="color: #ff6b6b">MAKARONI CITAPEN</span> |
+              Dibuat oleh : Anissa Agustini - 11220012 ❤️
+            </p>
+          </div>
         </div>
       </div>
     </section>
