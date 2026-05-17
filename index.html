@@ -161,9 +161,8 @@
         margin: 0 auto 3rem;
       }
 
-      /* HERO - FONT PROPORSI */
+      /* HERO */
       .hero {
-        height: 100vh;
         background: linear-gradient(
           135deg,
           #1e3c72 0%,
@@ -175,10 +174,13 @@
         justify-content: center;
         text-align: center;
         color: white;
+        padding-top: 140px; /* Jarak pas agar tidak tertutup navbar fixed */
+        padding-bottom: 100px;
       }
 
       .hero-content {
         max-width: 800px;
+        margin: 0 auto;
       }
 
       .hero-title {
@@ -195,7 +197,7 @@
         line-height: 1.4;
       }
 
-      /* BUTTON - UKURAN NORMAL & DINAMIS */
+      /* BUTTON */
       .btn {
         display: inline-block;
         padding: 1rem 2rem;
@@ -244,7 +246,7 @@
         box-shadow: 0 12px 35px rgba(37, 211, 102, 0.5);
       }
 
-      /* MENU - DENGAN FOTO PRODUK */
+      /* MENU */
       .menu {
         background: #f8f9fa;
       }
@@ -298,7 +300,7 @@
       }
 
       .product-price {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         font-weight: 700;
         background: linear-gradient(45deg, #ff6b6b, #feca57);
         -webkit-background-clip: text;
@@ -313,9 +315,8 @@
         line-height: 1.6;
       }
 
-      /* TENTANG & KONTAK - FONT PROPORSI */
-      .tentang-content,
-      .kontak-content {
+      /* TENTANG */
+      .tentang-content {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 3rem;
@@ -340,6 +341,67 @@
         font-family: "Bebas Neue", sans-serif;
         font-size: 2.2rem;
         color: #ff6b6b;
+      }
+
+      /* STYLE BARU: GALERI GRID */
+      .galeri {
+        background: #f8f9fa;
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .gallery-item {
+        position: relative;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        aspect-ratio: 4/3;
+        background: #ddd;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .gallery-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+      }
+
+      /* Efek Caption Muncul saat Kursor di Atas Foto (Hover Overlay) */
+      .gallery-caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+        color: white;
+        padding: 2rem 1rem 1rem;
+        font-size: 0.95rem;
+        font-weight: 500;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .gallery-item:hover .gallery-caption {
+        opacity: 1;
+      }
+
+      /* KONTAK */
+      .kontak-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: center;
       }
 
       .kontak-item {
@@ -376,6 +438,9 @@
           left: 0;
         }
 
+        .hero {
+          padding-top: 120px;
+        }
         .hero-title {
           font-size: 2.8rem;
         }
@@ -383,7 +448,8 @@
         .kontak-content {
           grid-template-columns: 1fr;
         }
-        .products-grid {
+        .products-grid,
+        .gallery-grid {
           grid-template-columns: 1fr;
         }
         .section-title {
@@ -411,23 +477,12 @@
       }
 
       @keyframes bounce {
-        0%,
-        20%,
-        50%,
-        80%,
-        100% {
-          transform: translateY(0);
-        }
-        40% {
-          transform: translateY(-8px);
-        }
-        60% {
-          transform: translateY(-4px);
-        }
+        0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+        40% { transform: translateY(-8px); }
+        60% { transform: translateY(-4px); }
       }
 
-      /*footer*/
-
+      /* FOOTER */
       .footer {
         background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
         color: white;
@@ -457,31 +512,6 @@
         color: #ff6b6b !important;
       }
 
-      .logo-footer {
-        font-family: "Bebas Neue", sans-serif;
-        font-size: 1.8rem;
-        background: linear-gradient(45deg, #ff6b6b, #feca57);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-
-      .wa-footer-btn {
-        display: inline-block;
-        background: linear-gradient(45deg, #25d366, #128c7e);
-        color: white;
-        padding: 0.9rem 1.8rem;
-        border-radius: 25px;
-        text-decoration: none;
-        font-weight: 600;
-        box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
-        transition: all 0.3s;
-      }
-
-      .wa-footer-btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 10px 30px rgba(37, 211, 102, 0.6);
-      }
-
       @media (max-width: 768px) {
         .footer-top {
           grid-template-columns: 1fr;
@@ -492,7 +522,6 @@
     </style>
   </head>
   <body>
-    <!-- NAVBAR -->
     <nav class="navbar">
       <div class="nav-container">
         <div class="logo">🍝 MAKARONI CITAPEN</div>
@@ -500,9 +529,10 @@
           <li><a href="#home" class="nav-link">Home</a></li>
           <li><a href="#menu" class="nav-link">Menu</a></li>
           <li><a href="#tentang" class="nav-link">Tentang</a></li>
+          <li><a href="#galeri" class="nav-link">Galeri</a></li>
           <li><a href="#kontak" class="nav-link">Kontak</a></li>
           <a
-            href="https://wa.me/628997333261"
+            href="https://wa.me/6285133514727"
             class="wa-btn-nav"
             target="_blank"
             ><i class="fab fa-whatsapp"></i> WA</a
@@ -512,7 +542,6 @@
       </div>
     </nav>
 
-    <!-- HERO -->
     <section id="home" class="hero">
       <div class="container">
         <div class="hero-content">
@@ -523,12 +552,12 @@
           <div class="hero-highlight">
             Renyah sampe pagi • Gurih nempel di lidah<br />
             <strong
-              >100gr Cuma Rp15.000 <span class="star-emoji">⭐</span></strong
+              >Mulai Rp5.000 (100 gr) & Rp10.000 (250 gr) <span class="star-emoji">⭐</span></strong
             >
           </div>
           <div style="margin-top: 2rem">
             <a
-              href="https://wa.me/628997333261?text=Halo%20makaroni%20CITAPEN!%20Saya%20mau%20pesan🔥"
+              href="https://wa.me/6285133514727?text=Halo%20makaroni%20CITAPEN!%20Saya%20mau%20pesan🔥"
               class="btn btn-primary"
               target="_blank"
               >PESAN via WA</a
@@ -541,48 +570,45 @@
       </div>
     </section>
 
-    <!-- MENU DENGAN FOTO -->
     <section id="menu" class="menu">
       <div class="container">
         <h2 class="section-title">MENU KAMI</h2>
-        <p class="section-subtitle">Pilih yang bikin lidahmu kegoda!</p>
+        <p class="section-subtitle">Pilih varian rasa dan jenis makaronimu!</p>
         <div class="products-grid">
-          <!-- ORIGINAL -->
           <div class="product-card">
             <div class="product-image">
               <img src="images/image1.jfif" alt="Makaroni Original" />
             </div>
             <div class="product-content">
-              <h3 class="product-title">ORIGINAL GURIH</h3>
-              <div class="product-price">Rp 15.000</div>
+              <h3 class="product-title">VARIAN ORIGINAL</h3>
+              <div class="product-price">100g: Rp5.000 | 250g: Rp10.000</div>
               <p class="product-desc">
-                Renyah CITAPENk sampe habis! Gurihnya nempel di lidah.
-                <strong>Terlaris #1!</strong>
+                Gurihnya nempel di lidah! Tersedia dalam pilihan 
+                <strong>Makaroni Kering</strong> atau <strong>Makaroni Basah</strong> sesuai seleramu.
               </p>
               <button
                 class="btn btn-wa"
-                onclick="orderWA('ORIGINAL GURIH - Rp15.000 / 100gr')"
+                onclick="orderWA('Varian Original (Kering/Basah)')"
               >
                 <i class="fab fa-whatsapp"></i> Pesan
               </button>
             </div>
           </div>
 
-          <!-- PEDAS -->
           <div class="product-card">
             <div class="product-image">
               <img src="images/image2.jfif" alt="Makaroni Pedas" />
             </div>
             <div class="product-content">
-              <h3 class="product-title">PEDAS LEVEL 10</h3>
-              <div class="product-price">Rp 18.000</div>
+              <h3 class="product-title">VARIAN PEDAS 🔥</h3>
+              <div class="product-price">100g: Rp5.000 | 250g: Rp10.000</div>
               <p class="product-desc">
-                Pedasnya bikin mata berair! Renyah + pedas =
-                <strong>Memabukkan!</strong>
+                Pedasnya bikin nagih mantap! Tersedia dalam pilihan 
+                <strong>Makaroni Kering</strong> atau <strong>Makaroni Basah</strong>.
               </p>
               <button
                 class="btn btn-wa"
-                onclick="orderWA('PEDAS LEVEL 10 - Rp18.000 / 100gr')"
+                onclick="orderWA('Varian Pedas (Kering/Basah)')"
               >
                 <i class="fab fa-whatsapp"></i> Pesan
               </button>
@@ -592,16 +618,15 @@
       </div>
     </section>
 
-    <!-- TENTANG -->
     <section id="tentang" class="tentang">
       <div class="container">
         <h2 class="section-title">KENAPA Pilih KAMI?</h2>
         <div class="tentang-content">
           <div class="tentang-text">
-            <h3><i class="fas fa-heart"></i> KERENABAN RUMAHAN</h3>
+            <h3><i class="fas fa-heart"></i> KERENYAHAN RUMAHAN</h3>
             <p>
-              Dibuat fresh setiap hari dengan resep rahasia turun-temurun. Bahan
-              premium, higienis, 100% halal!
+              Dibuat fresh setiap hari dengan resep terbaik. Bahan
+              premium, higienis, 100% halal! Pilih jenis kesukaanmu, mau yang tipe Kering kriuk atau Basah yang bumbunya meresap.
             </p>
             <div class="stats">
               <div class="stat-item">
@@ -627,7 +652,40 @@
       </div>
     </section>
 
-    <!-- KONTAK -->
+    <section id="galeri" class="galeri">
+      <div class="container">
+        <h2 class="section-title">GALERI DOKUMENTASI</h2>
+        <p class="section-subtitle">Intip kebersihan proses produksi dan aktivitas harian kami!</p>
+        
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="images/dokumentasi5.jpeg" alt="Dokumentasi 1" />
+            <div class="gallery-caption">Proses Menggoreng Higienis 🥣</div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/dokumentasi.jpeg" alt="Dokumentasi 2" />
+            <div class="gallery-caption">Bahan Baku Berkualitas & Halal 🥇</div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/dokumentasi3.jpeg" alt="Dokumentasi 3" />
+            <div class="gallery-caption">Pengemasan Rapi & Aman 📦</div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/dokumentasi4.jpeg" alt="Dokumentasi 4" />
+            <div class="gallery-caption">Ratusan Pcs Siap Kirim Setiap Hari 🚚</div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/dokumentasi2.jpeg" alt="Dokumentasi 5" />
+            <div class="gallery-caption">Ratusan Pcs Siap Kirim Setiap Hari 🚚</div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/dokumentasi6.jpeg" alt="Dokumentasi 6" />
+            <div class="gallery-caption">Ratusan Pcs Siap Kirim Setiap Hari 🚚</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section
       id="kontak"
       class="kontak"
@@ -644,19 +702,19 @@
               <i class="fab fa-whatsapp"></i> WA FAST RESPONSE
             </h3>
             <div class="kontak-item">
-              <i class="fab fa-whatsapp"></i> <strong>08997333261</strong>
+              <i class="fab fa-whatsapp"></i> <strong>085133514727</strong>
             </div>
             <div class="kontak-item">
               <i class="fas fa-map-marker-alt"></i> Jl. Empangsari, Kec. Tawang,
               Kota. Tasikmalaya
             </div>
             <div class="kontak-item">
-              <i class="fas fa-clock"></i> 07.00 - 17:00
+              <i class="fas fa-clock"></i> 07.00 - 15.00 WIB
             </div>
           </div>
           <div style="text-align: center">
             <a
-              href="https://wa.me/628997333261"
+              href="https://wa.me/6285133514727"
               class="btn btn-primary"
               style="
                 background: #25d366;
@@ -668,16 +726,15 @@
               <i class="fab fa-whatsapp"></i> Chat Sekarang
             </a>
           </div>
-          <p style="color: #aaa; margin: 0">
+          <p style="color: #aaa; margin: 0; grid-column: 1 / -1; text-align: center; margin-top: 2rem;">
             ©2026 <span style="color: #ff6b6b">MAKARONI CITAPEN</span> | Dibuat oleh : Anissa Agustini - 11220012 ❤️
           </p>
         </div>
       </div>
     </section>
 
-    <!-- FLOATING WA -->
     <a
-      href="https://wa.me/628997333261?text=Halo%20makaroni%20CITAPEN!"
+      href="https://wa.me/6285133514727?text=Halo%20makaroni%20CITAPEN!"
       class="floating-wa"
       target="_blank"
       title="WhatsApp"
@@ -686,14 +743,14 @@
     </a>
 
     <script>
-      const PHONE_NUMBER = "628997333261"; // GANTI NOMOR KAMU
+      const PHONE_NUMBER = "6285133514727";
 
       function orderWA(product) {
         const message = `Halo Makaroni CITAPEN! 😍%0A%0APesan: ${product}%0A%0AInfo ketersediaan & ongkir? 🚚`;
         window.open(`https://wa.me/${PHONE_NUMBER}?text=${message}`, "_blank");
       }
 
-      // Mobile menu
+      // Mobile menu toggle
       document.querySelector(".menu-toggle").addEventListener("click", () => {
         document.querySelector(".nav-menu").classList.toggle("active");
       });
@@ -709,12 +766,12 @@
         });
       });
 
-      // Navbar active
+      // Navbar active indicator on scroll
       window.addEventListener("scroll", () => {
-        const sections = document.querySelectorAll("section");
+        const sections = document.querySelectorAll("section, .galeri");
         let current = "";
         sections.forEach((section) => {
-          if (window.scrollY >= section.offsetTop - 100) {
+          if (window.scrollY >= section.offsetTop - 150) {
             current = section.getAttribute("id");
           }
         });
@@ -725,7 +782,5 @@
         });
       });
     </script>
-
-    
   </body>
 </html>
